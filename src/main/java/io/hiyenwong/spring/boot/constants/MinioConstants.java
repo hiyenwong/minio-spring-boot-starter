@@ -11,7 +11,9 @@ public final class MinioConstants {
   /** Enable Minio. */
   public static final String ENABLED = PREFIX + ".enabled";
 
-  public static  String SLASH = "/";
+  public static final String MINIO_TASK_EXECUTOR_BEAN_NAME = "minioTaskExecutor";
+
+  public static String SLASH = "/";
 
   private MinioConstants() {
     throw new AssertionError("Must not instantiate constant utility class");

@@ -16,6 +16,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import static io.hiyenwong.spring.boot.constants.MinioConstants.ENABLED;
+import static io.hiyenwong.spring.boot.constants.MinioConstants.MINIO_TASK_EXECUTOR_BEAN_NAME;
 import static org.yaml.snakeyaml.nodes.Tag.PREFIX;
 
 /**
@@ -27,12 +28,11 @@ import static org.yaml.snakeyaml.nodes.Tag.PREFIX;
 @ConditionalOnProperty(prefix = PREFIX, name = ENABLED, havingValue = "true", matchIfMissing = true)
 public class MinioAutoContextConfiguration {
 
-  @Bean(name = MINIO_T)
+  @Bean(name = MINIO_TASK_EXECUTOR_BEAN_NAME)
   @ConditionalOnMissingBean
   public ExecutorService ossTaskExecutor() {
     int coreSize = Runtime.getRuntime().availableProcessors();
-    return new ThreadPoolExecutor(coreSize, 128, 60, TimeUnit.SECONDS,
-            new SynchronousQueue<>());
+    return new ThreadPoolExecutor(coreSize, 128, 60, TimeUnit.SECONDS, new SynchronousQueue<>());
   }
 
   @Bean
