@@ -30,7 +30,7 @@ public class MinioAutoContextConfiguration {
 
   @Bean(name = MINIO_TASK_EXECUTOR_BEAN_NAME)
   @ConditionalOnMissingBean
-  public ExecutorService ossTaskExecutor() {
+  public ExecutorService minioTaskExecutor() {
     int coreSize = Runtime.getRuntime().availableProcessors();
     return new ThreadPoolExecutor(coreSize, 128, 60, TimeUnit.SECONDS, new SynchronousQueue<>());
   }
