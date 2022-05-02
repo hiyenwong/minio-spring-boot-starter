@@ -59,16 +59,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>aliyun-context-spring-boot-starter</artifactId>
         </dependency>
-
+        <!-- Min IO dependency -->
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
             <version>8.3.9</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <optional>true</optional>
         </dependency>
 
         <!-- Testing dependencies -->
@@ -76,6 +71,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <optional>true</optional>
         </dependency>
 
     </dependencies>
