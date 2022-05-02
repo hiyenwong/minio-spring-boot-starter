@@ -989,7 +989,6 @@ Cargo.lock
 /libraries/phpmailer/*
 /libraries/phputf8/*
 /libraries/simplepie/*
-/libraries/src/*
 /libraries/vendor/*
 /libraries/classmap.php
 /libraries/cms.php
@@ -2318,8 +2317,6 @@ crash.log
 *.log.*
 *.sig
 
-pkg/
-src/
 
 ### Ada template
 # Object file
@@ -3262,18 +3259,6 @@ Mercury.modules
 *.lvlps
 .cache/
 
-### Maven template
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
 
 ### MonoDevelop template
 #User Specific
